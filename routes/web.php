@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/invoice', 'InvoiceController@index');
+Route::get('/token', 'InvoiceController@token');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
